@@ -1,0 +1,101 @@
+<html>
+<script>
+function pageinit()
+{
+  var url1 = "https://www.facebook.com/standnewshk/videos/425982304792577/"
+  var url2 = "https://www.facebook.com/standnewshk/videos/2342065876119624/"
+  var url3 = "https://www.facebook.com/RTHKVNEWS/videos/358006341780545/"
+  var url4 = "https://www.facebook.com/hk.nextmedia/videos/493213188148987/"
+  var url5 = "https://www.facebook.com/socrec/videos/334469000770846/"
+
+  document.getElementById("vid1").value = url1;
+  document.getElementById("vid2").value = url2;
+  document.getElementById("vid3").value = url3;
+  document.getElementById("vid4").value = url4;
+  document.getElementById("vid5").value = url5;
+  
+  updatevideo();
+}
+
+function updatevideo() 
+{
+  var v_srcpre = "https://www.facebook.com/plugins/video.php?href=";
+  var v_srcpost = "&width=500&show_text=false&height=281&appId";
+
+  var v_vid1   = document.getElementById("vid1");
+  var v_vid2   = document.getElementById("vid2");
+  var v_vid3   = document.getElementById("vid3");
+  var v_vid4   = document.getElementById("vid4");
+  var v_vid5   = document.getElementById("vid5");
+  var v_vid6   = document.getElementById("vid6");
+  
+  var v_vidfm1 = document.getElementById("vidfm1");
+  v_vidfm1.src = v_srcpre + encodeURIComponent(v_vid1.value) + v_srcpost;
+
+  var v_vidfm2 = document.getElementById("vidfm2");
+  v_vidfm2.src = v_srcpre + encodeURIComponent(v_vid2.value) + v_srcpost;
+
+  var v_vidfm3 = document.getElementById("vidfm3");
+  v_vidfm3.src = v_srcpre + encodeURIComponent(v_vid3.value) + v_srcpost;
+
+  var v_vidfm4 = document.getElementById("vidfm4");
+  v_vidfm4.src = v_srcpre + encodeURIComponent(v_vid4.value) + v_srcpost;
+
+  var v_vidfm5 = document.getElementById("vidfm5");
+  v_vidfm5.src = v_srcpre + encodeURIComponent(v_vid5.value) + v_srcpost;
+ 
+  var v_vidfm6 = document.getElementById("vidfm6");
+  v_vidfm6.src = v_srcpre + encodeURIComponent(v_vid6.value) + v_srcpost;
+}
+</script>
+
+<body onload="pageinit()">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<table>
+<tr>
+<!-- First Column -->
+<td>1.
+<iframe name='vidfm1' id='vidfm1' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+<br/>2.
+<iframe name='vidfm2' id='vidfm2' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+<br/>3.
+<iframe name='vidfm3' id='vidfm3' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+</td>
+<!-- Second Column -->
+<td>4.
+<iframe name='vidfm4' id='vidfm4' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+<br/>5.
+<iframe name='vidfm5' id='vidfm5' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+<br/>6.
+<iframe name='vidfm6' id='vidfm6' src="" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+</td>
+</tr>
+</table>
+
+<form name="videourl" action="">
+Video URL 1:
+ <input name='vid1' id='vid1' type='text' size="150" >
+ <br>
+Video URL 2:
+ <input name='vid2' id='vid2' type='text' size="150"  >
+ <br>
+Video URL 3:
+ <input name='vid3' id='vid3' type='text' size="150"  >
+ <br>
+Video URL 4:
+ <input name='vid4' id='vid4' type='text' size="150"  >
+ <br>
+Video URL 5:
+ <input name='vid5' id='vid5' type='text' size="150"  >
+ <br>
+Video URL 6:
+ <input name='vid6' id='vid6' type='text' size="150"  >
+ <br>
+<input type='button' onclick="updatevideo()" value='Update'>
+
+</form>
+
+</body>
+</html>
